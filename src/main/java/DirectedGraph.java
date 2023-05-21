@@ -1,12 +1,11 @@
-package main.java; /**
- * @author ruwandigeekiyanage
- */
-import java.util.*;
+package main.java;
 
+import java.util.*;
 /**
  * This class is the template of Directed graphs.
  * It creates a 2D square matrix to represent a directed graph.
  *
+ * @author Randika Geekiyanage 20210147 w1867037
  */
 public class DirectedGraph {
     /**
@@ -35,6 +34,14 @@ public class DirectedGraph {
 
     /**
      *
+     * @return the adjacent matrix of the directed graph
+     */
+    public int[][] getAdjacentMatrix() {
+        return adjacentMatrix;
+    }
+
+    /**
+     *
      * @return the number of vertices directed graph has
      */
     public int getNumVertices() {
@@ -58,7 +65,13 @@ public class DirectedGraph {
      * @param to end vertex
      */
     public void addEdge(int from, int to) {
-        adjacentMatrix[from][to] = 1;
+        try {
+            adjacentMatrix[from][to] = 1;
+        }catch (ArrayIndexOutOfBoundsException ex){
+            System.out.println("Invalid Matrix. Please re-define number of vertices.");
+            System.exit(0);
+        }
+
     }
 
     /**
