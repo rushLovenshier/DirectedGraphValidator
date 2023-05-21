@@ -1,9 +1,6 @@
-package main.java; /**
- * @author ruwandigeekiyanage
- */
+package main.java;
 
 import java.io.*;
-
 /**
  * Parses values from a file to create an adjacent matrix of a directed graph
  * The file should pass values as couples of values of type integer
@@ -13,6 +10,8 @@ import java.io.*;
  * <br>1 4
  * <br>2 4
  * <br>2 3
+ *
+ * @author Randika Geekiyanage 20210147 w1867037
  */
 public class GraphParser {
     /**
